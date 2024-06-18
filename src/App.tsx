@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Search from './components/Search';
+import Weather from './components/Weather';
+import {WeatherData} from './utils/WeatherData';
+import { AppContainer, AppHeader } from './AppStyled';
 
-function App() {
+const App = () => {
+  const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
+
+  const handleSearch = (data: WeatherData) => {
+    setWeatherData(data);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <AppHeader>Pogoda &#9925;</AppHeader>
+      <Search onSearch={handleSearch} />
+      {weatherData && <Weather data={weatherData} />}
+    </AppContainer>
   );
 }
 
