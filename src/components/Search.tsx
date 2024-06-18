@@ -28,7 +28,7 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
         type="text"
         value={city}
         onChange={(e) => setCity(e.target.value)}
-        placeholder="Enter city"
+        placeholder="Podaj miasto / kraj"
       />
       <SearchButton onClick={handleSearch}>Search</SearchButton>
     </SearchWrapper>

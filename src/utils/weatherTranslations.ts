@@ -42,6 +42,10 @@ const weatherTranslations: WeatherTranslations = {
         weatherName: "Mgliście",
         uniCode: "\u{1F32B}",
     },
+    "overcast clouds": {
+        weatherName: "Pochmurnie",
+        uniCode: "\u2601",
+    }
 }
 
 export default weatherTranslations

@@ -14,11 +14,11 @@ const Weather: React.FC<WeatherProps> = ({ data }) => {
     }
 
     const translateWeather = (weatherConditions: string) => {
-        return weatherTranslations[weatherConditions].weatherName || weatherConditions
+        return weatherTranslations[weatherConditions]?.weatherName ?? weatherConditions
     }
 
     const translateUniCode = (weatherConditions: string) => {
-        return weatherTranslations[weatherConditions].uniCode || ""
+        return weatherTranslations[weatherConditions]?.uniCode ?? ""
     }
 
     return (
