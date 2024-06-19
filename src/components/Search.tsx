@@ -41,6 +41,7 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
       try {
         const response = await axios.get(url)
         onSearch(response.data)
+        setError(null)
       } catch (error) {
         console.error("Błąd podczas pobierania danych pogodowych przez koordynaty.", error);
         setError("Błąd podczas pobierania danych pogodowych przez koordynaty.");
