@@ -24,7 +24,7 @@ const Weather: React.FC<WeatherProps> = ({ data }) => {
     return (
       <WeatherWrapper>
         <City>{translateCity(data.name)}</City>
-        <Temperature>Temperatura: {Math.round(data.main.temp - 273.15)}°C</Temperature>
+        <Temperature>Temperatura: {Math.round(data.main.temp)}°C</Temperature>
         <Description>Opis: {translateWeather(data.weather[0].description)} {translateUniCode(data.weather[0].description)}</Description>
         <Humidity>Wilgotność: {data.main.humidity}%</Humidity>
         <Wind>Prędkość wiatru: {data.wind.speed} m/s</Wind>

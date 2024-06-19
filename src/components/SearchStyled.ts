@@ -31,6 +31,7 @@ export const SearchButton = styled.button`
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
+    margin: 3px;
 
     &:hover {
         background-color: #0056b3;
@@ -39,4 +40,11 @@ export const SearchButton = styled.button`
     &:focus {
         outline: none;
     }
+`
+
+export const SearchErrorMessage = styled.div`
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
 `
