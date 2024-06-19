@@ -17,7 +17,7 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
   const getLocation = () => {
     setError(null)
     setCity('')
-    
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         position => {
@@ -70,7 +70,9 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
           onChange={(e) => setCity(e.target.value)}
           placeholder="Podaj miasto / kraj"
         />
-        <SearchButton>Current Location <FontAwesomeIcon icon={faMapMarkerAlt} onClick={getLocation} /></SearchButton>
+        <SearchButton onClick={getLocation}>
+          Current Location <FontAwesomeIcon icon={faMapMarkerAlt} />
+        </SearchButton>
         <SearchButton onClick={fetchWeatherDataByCityName}>Search</SearchButton>
       </SearchWrapper>
       {error && <SearchErrorMessage>{error}</SearchErrorMessage>}
