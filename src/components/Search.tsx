@@ -71,7 +71,7 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
           placeholder="Podaj miasto / kraj"
         />
         <SearchButton onClick={getLocation}>
-          Current Location <FontAwesomeIcon icon={faMapMarkerAlt} />
+          Aktualna lokalizacja <FontAwesomeIcon icon={faMapMarkerAlt} />
         </SearchButton>
         <SearchButton onClick={fetchWeatherDataByCityName}>Search</SearchButton>
       </SearchWrapper>
